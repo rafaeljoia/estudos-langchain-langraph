@@ -1,5 +1,6 @@
-from openai import OpenAI
+# pylint: skip-file
 import os
+from openai import OpenAI
 from dotenv import load_dotenv
 
 # Carrega as variáveis do arquivo .env
@@ -16,8 +17,9 @@ if 'OPENAI_API_KEY' not in os.environ:
 def main():
     try:
         # Inicializa o cliente OpenAI
-        client = OpenAI()
-        
+        client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+              
+          
         # Faz a requisição para a API
         response = client.completions.create(
             model="gpt-3.5-turbo-instruct",
