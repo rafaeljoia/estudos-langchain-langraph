@@ -18,7 +18,6 @@ def main():
     try:
         # Inicializa o cliente OpenAI
         client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
-              
           
         # Faz a requisição para a API
         response = client.completions.create(
