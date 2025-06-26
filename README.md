@@ -30,42 +30,6 @@ venv\Scripts\activate  # Windows
 pip install -r requirements.txt
 ```
 
-## 📁 Estrutura do Projeto
-
-```
-projeto/
-├── README.md
-├── requirements.txt
-├── .env.example
-├── .gitignore
-├── src/
-│   ├── agents/
-│   │   ├── search_agent.py
-│   │   └── qa_agent.py
-│   ├── chains/
-│   │   ├── rag_chain.py
-│   │   └── summary_chain.py
-│   ├── graphs/
-│   │   ├── workflow_graph.py
-│   │   └── decision_graph.py
-│   ├── tools/
-│   │   ├── web_search.py
-│   │   └── document_loader.py
-│   └── utils/
-│       ├── config.py
-│       └── helpers.py
-├── examples/
-│   ├── basic_chatbot.py
-│   ├── rag_system.py
-│   └── agent_workflow.py
-├── data/
-│   ├── documents/
-│   └── embeddings/
-└── tests/
-    ├── test_agents.py
-    └── test_chains.py
-```
-
 ## ⚙️ Configuração
 
 ### 1. Variáveis de Ambiente
