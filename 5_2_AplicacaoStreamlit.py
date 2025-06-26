@@ -1,12 +1,7 @@
+# pylint: skip-file
 import streamlit as st
 from langchain_openai import ChatOpenAI
 from langchain.prompts import PromptTemplate
-import os
-import yaml
-
-with open('config.yaml', 'r') as config_file:
-    config = yaml.safe_load(config_file)
-os.environ['OPENAI_API_KEY'] = config['OPENAI_API_KEY']
 
 openai = ChatOpenAI(model_name='gpt-3.5-turbo', temperature=0)
 
@@ -18,6 +13,7 @@ O relatório deve ser escrito em {idioma} e incluir a seguinte análise:
 {analise}
 
 Certifique-se de fornecer insights e conclusões para esta seção.
+Formate o relatório utilizando Markdown.
 '''
 #Formate o relatório utilizando Markdown
 
